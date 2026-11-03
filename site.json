@@ -1,0 +1,11 @@
+{
+  "title": "Zhuhui Tang | Academic Website",
+  "description": "Research on clinical knowledge discovery, knowledge representation, and human-centered AI for health.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}
