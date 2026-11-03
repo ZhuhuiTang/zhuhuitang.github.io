@@ -32,7 +32,7 @@ export default function ProjectOnePage() {
           <div className="project-detail-meta">
             <p className="project-role">
               <strong>My Role:</strong> Research Assistant · Institute of
-              Information on Traditional Chinese Medicine, Chinese Academy of
+              Information on Traditional Chinese Medicine, China Academy of
               Chinese Medical Sciences
             </p>
             <div className="project-detail-topics">

@@ -16,7 +16,7 @@ export const projects = [
     title: "Interactive Insomnia Knowledge System",
     role: "Co-Principal Investigator & Project Lead · Master's Research",
     description:
-      "Led the end-to-end development of an interactive insomnia knowledge system, from extracting and analyzing 500+ clinical records to constructing a symptom–syndrome–prescription knowledge graph and building the web-based platform.",
+      "Led the end-to-end development of an interactive insomnia knowledge system, from extracting and analyzing around 300 clinical records to constructing a symptom–syndrome–prescription knowledge graph and building the web-based platform.",
     tags: ["Knowledge Graphs", "Interactive Systems", "Clinical Informatics"],
     image: "/assets/project-insomnia-knowledge-system.png",
     alt: "Illustration of an insomnia knowledge system connecting symptoms, syndromes, treatments, and clinical evidence",

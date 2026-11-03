@@ -33,7 +33,7 @@ export default function ProjectTwoPage() {
           <div className="project-detail-meta">
             <p className="project-role">
               <strong>My Role:</strong> Co-Principal Investigator (Co-PI) ·
-              Institute of Basic Theory for Chinese Medicine, Chinese Academy of
+              Institute of Basic Theory for Chinese Medicine, China Academy of
               Chinese Medical Sciences
             </p>
             <div className="project-detail-topics">
@@ -345,7 +345,7 @@ export default function ProjectTwoPage() {
                 </em>
               </p>
               <p className="project-page-description">
-                Chinese Academy of Chinese Medical Sciences
+                China Academy of Chinese Medical Sciences
               </p>
             </div>
             <div className="space-y-2">
@@ -356,14 +356,6 @@ export default function ProjectTwoPage() {
                 <em>
                   Intelligent Knowledge System for Insomnia Management (V1.0)
                 </em>
-              </p>
-            </div>
-            <div className="space-y-2">
-              <h3 className="project-page-description font-semibold">
-                Research Funding
-              </h3>
-              <p className="project-page-description">
-                Grant No. YZX-202330 · Approx. CNY 50,000
               </p>
             </div>
           </div>

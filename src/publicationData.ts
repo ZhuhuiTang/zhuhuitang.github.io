@@ -38,7 +38,7 @@ export const publications: Publication[] = [
       authorRole: "First Author",
       type: "Methodological Perspective",
       authors:
-        "Zhuhui Tang, Xu Tong, Yafei Jia, Shiyue Deng, Gaoshun Fu, Qiong Wu, Yupeng Zhang",
+        "Zhuhui Tang, Xu Tong, Yafei Jia, Shiyue Deng, Gaoshuang Fu, Qiong Wu, Yupeng Zhang",
       journal: "Journal of Basic Chinese Medicine",
       citation: "30(11), 1856–1860",
       summary:

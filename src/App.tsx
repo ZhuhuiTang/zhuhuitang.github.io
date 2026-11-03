@@ -33,7 +33,7 @@ export default function App() {
                 Research Assistant
               </p>
               <p className="font-['Inter:Semi_Bold'] text-[15px] leading-6 font-semibold text-[#3c2b2b]">
-                China Academy of Chinese Mdeical Sciences
+                China Academy of Chinese Medical Sciences
               </p>
             </div>
 
