@@ -5,9 +5,10 @@ import ResearchInterests from "./ResearchInterests"
 import { useHorizontalCarousel } from "./useHorizontalCarousel"
 import { Link } from "react-router"
 import { projects } from "./projects"
+import SectionAllLink from "./SectionAllLink"
 
 export default function App() {
-  const { trackRef, edges, scroll } = useHorizontalCarousel()
+  const { trackRef } = useHorizontalCarousel()
 
   return (
     <div className="min-h-screen bg-white text-[#8a6b6b]">
@@ -84,12 +85,12 @@ export default function App() {
                     knowledge graphs
                   </strong>
                   , including an{" "}
-                  <a
+                  <Link
                     className="text-[#c9705f] underline underline-offset-2"
-                    href="#platform"
+                    to="/projects/interactive-insomnia-knowledge-system"
                   >
                     insomnia knowledge-discovery platform
-                  </a>
+                  </Link>
                   .
                 </p>
                 <p>
@@ -128,28 +129,13 @@ export default function App() {
               be grateful for opportunities to connect with researchers and
               discuss potential PhD positions or research collaborations.
             </p>
-            <button
-              className="phd-application-download"
-              type="button"
-              disabled
-              title="自我介绍文件待上传"
-              aria-label="Download self-introduction，文件待上传"
-            >
-              <svg aria-hidden="true" viewBox="0 0 24 24" fill="none">
-                <path
-                  d="M12 3v15m-4-4 4 4 4-4"
-                  stroke="currentColor"
-                  strokeWidth="1.5"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-              <span>Download self-introduction</span>
-              <span className="phd-application-file">PPTX · 25 MB</span>
-            </button>
+            <p className="phd-application-file-note">
+              Self-introduction slides coming soon.
+            </p>
           </section>
-          <ResearchInterests />
         </div>
+
+        <ResearchInterests />
 
         <section
           className="col-span-full min-w-0"
@@ -260,133 +246,59 @@ export default function App() {
         >
           <div className="projects-heading">
             <h2 id="projects-title">Projects</h2>
-            <div className="publications-controls">
-              <span className="projects-count">5 projects</span>
-              <button
-                type="button"
-                disabled={edges.start}
-                onClick={() => scroll(-1)}
-                aria-label="Previous projects"
-                aria-controls="projects-track"
-              >
-                <svg aria-hidden="true" viewBox="0 0 24 24" fill="none">
-                  <path d="M19 12H5m6-6-6 6 6 6" />
-                </svg>
-              </button>
-              <button
-                type="button"
-                disabled={edges.end}
-                onClick={() => scroll(1)}
-                aria-label="Next projects"
-                aria-controls="projects-track"
-              >
-                <svg aria-hidden="true" viewBox="0 0 24 24" fill="none">
-                  <path d="M5 12h14m-6-6 6 6-6 6" />
-                </svg>
-              </button>
-            </div>
+            <SectionAllLink to="/projects" label="projects" />
           </div>
           <ul
             className="projects-track"
             id="projects-track"
             ref={trackRef}
             tabIndex={0}
-            aria-label="5 projects; scroll horizontally to browse"
+            aria-label={`${projects.length} projects; scroll horizontally to browse`}
           >
-            {Array.from({ length: 5 }, (_, index) => {
-              const project = projects[index]
+            {projects.map((project, index) => {
+              const destination =
+                index < 2
+                  ? `/projects/${project.id}`
+                  : `/projects#${project.id}`
               return (
                 <li
                   className="publication-placeholder project-placeholder"
-                  key={index}
-                  aria-label={
-                    project
-                      ? project.title
-                      : `Project ${index + 1} of 5, content pending`
-                  }
+                  key={project.id}
+                  aria-label={project.title}
                 >
-                  {project ? (
-                    <>
-                      {index < 2 ? (
-                        <Link to={`/projects/${project.id}`}>
-                          <img
-                            className="project-cover"
-                            src={project.image}
-                            alt={project.alt}
-                            width="1448"
-                            height="1086"
-                            loading="lazy"
-                          />
-                        </Link>
-                      ) : (
-                        <img
-                          className="project-cover"
-                          src={project.image}
-                          alt={project.alt}
-                          width="1448"
-                          height="1086"
-                          loading="lazy"
-                        />
-                      )}
-                      <div className="project-details">
-                        <p className="project-category">{project.category}</p>
-                        <h3 className="project-title" title={project.title}>
-                          {index < 2 ? (
-                            <Link to={`/projects/${project.id}`}>
-                              {project.title}
-                            </Link>
-                          ) : (
-                            project.title
-                          )}
-                        </h3>
-                        <p className="project-role">{project.role}</p>
-                        <p className="project-description">
-                          {project.description}
-                        </p>
-                        <ul
-                          className="project-tags"
-                          aria-label="Project topics"
-                        >
-                          {project.tags.map((tag) => (
-                            <li key={tag}>{tag}</li>
-                          ))}
-                        </ul>
-                        <Link
-                          className="project-view"
-                          to={
-                            index < 2
-                              ? `/projects/${project.id}`
-                              : `/projects#${project.id}`
-                          }
-                          aria-label={`View Project: ${project.title}`}
-                        >
-                          View Project
-                          <svg
-                            aria-hidden="true"
-                            viewBox="0 0 24 24"
-                            fill="none"
-                          >
-                            <path d="M6 18 18 6M7 6h11v11" />
-                          </svg>
-                        </Link>
-                      </div>
-                    </>
-                  ) : (
-                    <>
-                      <div
-                        className="publication-image-placeholder"
-                        aria-hidden="true"
-                      />
-                      <div
-                        className="publication-text-placeholder"
-                        aria-hidden="true"
-                      >
-                        <span />
-                        <span />
-                        <span className="publication-meta-placeholder" />
-                      </div>
-                    </>
-                  )}
+                  <Link to={destination}>
+                    <img
+                      className="project-cover"
+                      src={project.image}
+                      alt={project.alt}
+                      width="1448"
+                      height="1086"
+                      loading="lazy"
+                    />
+                  </Link>
+                  <div className="project-details">
+                    <p className="project-category">{project.category}</p>
+                    <h3 className="project-title" title={project.title}>
+                      <Link to={destination}>{project.title}</Link>
+                    </h3>
+                    <p className="project-role">{project.role}</p>
+                    <p className="project-description">{project.description}</p>
+                    <ul className="project-tags" aria-label="Project topics">
+                      {project.tags.map((tag) => (
+                        <li key={tag}>{tag}</li>
+                      ))}
+                    </ul>
+                    <Link
+                      className="project-view"
+                      to={destination}
+                      aria-label={`View Project: ${project.title}`}
+                    >
+                      View Project
+                      <svg aria-hidden="true" viewBox="0 0 24 24" fill="none">
+                        <path d="M6 18 18 6M7 6h11v11" />
+                      </svg>
+                    </Link>
+                  </div>
                 </li>
               )
             })}

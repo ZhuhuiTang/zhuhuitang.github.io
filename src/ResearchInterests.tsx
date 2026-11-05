@@ -58,11 +58,11 @@ function InterestIcon({ index }: { index: number }) {
 export default function ResearchInterests() {
   return (
     <section
-      className="research-interests pt-14"
+      className="research-interests col-span-full"
       id="research"
       aria-labelledby="interests-title"
     >
-      <div className="space-y-6">
+      <header className="research-interests-heading">
         <h2
           className="font-['Inter:Bold'] text-[clamp(1.3rem,2.2vw,1.75rem)] leading-tight font-bold tracking-[0.16em] text-[#3c2b2b]"
           id="interests-title"
@@ -73,22 +73,22 @@ export default function ResearchInterests() {
           aria-hidden="true"
           className="h-[3px] w-[60px] rounded-full bg-[rgba(201,112,95,0.5)]"
         />
-        <ol className="research-interests-grid">
-          {interests.map((interest, index) => (
-            <li className="research-interest-card" key={interest.title}>
-              <div className="research-interest-meta" aria-hidden="true">
-                <InterestIcon index={index} />
-                <span>{String(index + 1).padStart(2, "0")}</span>
-              </div>
-              <h3>{interest.title}</h3>
-              <p className="research-interest-description">
-                {interest.description}
-              </p>
-              <p className="research-interest-topics">{interest.topics}</p>
-            </li>
-          ))}
-        </ol>
-      </div>
+      </header>
+      <ol className="research-interests-grid">
+        {interests.map((interest, index) => (
+          <li className="research-interest-card" key={interest.title}>
+            <div className="research-interest-meta" aria-hidden="true">
+              <InterestIcon index={index} />
+              <span>{String(index + 1).padStart(2, "0")}</span>
+            </div>
+            <h3>{interest.title}</h3>
+            <p className="research-interest-description">
+              {interest.description}
+            </p>
+            <p className="research-interest-topics">{interest.topics}</p>
+          </li>
+        ))}
+      </ol>
     </section>
   )
 }

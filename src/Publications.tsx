@@ -1,8 +1,10 @@
+import { Link } from "react-router"
+import SectionAllLink from "./SectionAllLink"
 import { useHorizontalCarousel } from "./useHorizontalCarousel"
 import { publications } from "./publicationData"
 
 export default function Publications() {
-  const { trackRef, edges, scroll } = useHorizontalCarousel()
+  const { trackRef } = useHorizontalCarousel()
 
   return (
     <section
@@ -12,33 +14,7 @@ export default function Publications() {
     >
       <div className="publications-heading">
         <h2 id="publications-title">Publications</h2>
-        <div className="publications-controls">
-          <span className="publications-count">
-            {publications.length} publications
-          </span>
-          <button
-            type="button"
-            disabled={edges.start}
-            onClick={() => scroll(-1)}
-            aria-label="Previous publications"
-            aria-controls="publications-track"
-          >
-            <svg aria-hidden="true" viewBox="0 0 24 24" fill="none">
-              <path d="M19 12H5m6-6-6 6 6 6" />
-            </svg>
-          </button>
-          <button
-            type="button"
-            disabled={edges.end}
-            onClick={() => scroll(1)}
-            aria-label="Next publications"
-            aria-controls="publications-track"
-          >
-            <svg aria-hidden="true" viewBox="0 0 24 24" fill="none">
-              <path d="M5 12h14m-6-6 6 6-6 6" />
-            </svg>
-          </button>
-        </div>
+        <SectionAllLink to="/publications" label="publications" />
       </div>
       <ul
         className="publications-track"
@@ -63,7 +39,13 @@ export default function Publications() {
               />
             </div>
             <div className="publication-details">
-              <h3>{publication.title}</h3>
+              <h3>
+                <Link
+                  to={`/publications#publication-${String(index + 1).padStart(2, "0")}`}
+                >
+                  {publication.title}
+                </Link>
+              </h3>
               <div className="publication-badges">
                 <span className="publication-badge publication-badge--published">
                   Published

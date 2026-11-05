@@ -2,15 +2,16 @@ import { Link, useLocation } from "react-router"
 
 const navigation = [
   { label: "Home", to: "/" },
-  { label: "Research", to: "/#research" },
+  { label: "Research", to: "/research" },
   { label: "Projects", to: "/projects" },
   { label: "Publications", to: "/publications" },
-  { label: "Hobbies", to: "/#hobbies-volunteering" },
+  { label: "Hobbies", to: "/hobbies" },
 ]
 
 export default function SiteHeader() {
   const location = useLocation()
-  const current = location.pathname + location.hash
+  const pathname = location.pathname.replace(/\/+$/, "") || "/"
+  const current = pathname + location.hash
 
   return (
     <header className="sticky top-0 z-20 border-b border-[#e0e5eb] bg-white/95 backdrop-blur-sm">

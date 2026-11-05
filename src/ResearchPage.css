@@ -1,0 +1,190 @@
+/* Preserve Tailwind's layer order when this stylesheet loads before index.css. */
+@layer theme, base, components, utilities;
+
+@layer components {
+  .page-container.research-perspective-page {
+    --perspective-heading: #3c2b2b;
+    --perspective-body: #62636a;
+    --perspective-muted: #8a6b6b;
+    --perspective-card: #fdfcfc;
+    --perspective-card-border: #e5e1df;
+    --perspective-radius: 1.25rem;
+    color: var(--perspective-body);
+    text-align: left;
+    white-space: normal;
+    word-break: normal;
+    overflow-wrap: normal;
+    hyphens: none;
+    text-wrap: wrap;
+  }
+
+  .research-perspective-page .research-perspective-subtitle {
+    margin-top: 0.625rem;
+    color: var(--perspective-muted);
+    font-size: clamp(1.0625rem, 1.6vw, 1.125rem);
+    line-height: 1.5;
+    letter-spacing: -0.015em;
+  }
+
+  .research-perspective-page .research-perspective-background {
+    margin-top: 0.875rem;
+    font-size: var(--page-body-size);
+    line-height: var(--page-body-leading);
+  }
+
+  .research-perspective-page .research-perspective-section {
+    scroll-margin-top: 7rem;
+  }
+
+  .research-perspective-page .research-perspective-section-heading h2 {
+    color: var(--perspective-heading);
+    font-size: clamp(1.25rem, 2vw, 1.5rem);
+    font-weight: 600;
+    line-height: 1.35;
+    letter-spacing: -0.02em;
+  }
+
+  .research-perspective-page .research-perspective-principles {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1.25rem;
+    margin-top: 1.25rem;
+  }
+
+  .research-perspective-page .research-perspective-principle {
+    min-width: 0;
+    border: 1px solid var(--perspective-card-border);
+    border-radius: var(--perspective-radius);
+    padding: clamp(1.25rem, 2vw, 1.75rem);
+    background: var(--perspective-card);
+  }
+
+  .research-perspective-page .research-perspective-number {
+    display: block;
+    margin-bottom: 0.625rem;
+    color: var(--publication-accent);
+    font-size: 0.8125rem;
+    font-weight: 400;
+    line-height: 1.5;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .research-perspective-page .research-perspective-principle h3 {
+    color: var(--perspective-heading);
+    font-size: 1.1875rem;
+    font-weight: 600;
+    line-height: 1.45;
+    letter-spacing: -0.015em;
+  }
+
+  .research-perspective-page .research-perspective-principle-title {
+    display: block;
+  }
+
+  .research-perspective-page .research-perspective-principle p {
+    margin-top: 0.875rem;
+    font-size: var(--page-body-size);
+    line-height: var(--page-body-leading);
+  }
+
+  .research-perspective-page .research-perspective-background-section {
+    margin-top: clamp(2rem, 4vw, 2.5rem);
+    border-top: 1px solid var(--publication-border);
+    padding-top: clamp(1.5rem, 3vw, 2rem);
+  }
+
+  .research-perspective-page .research-perspective-story {
+    margin-top: 1.25rem;
+  }
+
+  .research-perspective-page .research-perspective-story h3,
+  .research-perspective-page .research-perspective-exploration h3 {
+    color: var(--perspective-heading);
+    font-size: clamp(1.1875rem, 1.8vw, 1.375rem);
+    font-weight: 600;
+    line-height: 1.45;
+    letter-spacing: -0.015em;
+  }
+
+  .research-perspective-page .research-perspective-story-copy {
+    display: grid;
+    gap: 1rem;
+    margin-top: 0.875rem;
+    font-size: var(--page-body-size);
+    line-height: var(--page-body-leading);
+  }
+
+  .research-perspective-page .research-perspective-exploration {
+    margin-top: clamp(1.5rem, 3vw, 2rem);
+  }
+
+  .research-perspective-page .research-perspective-framework {
+    margin-top: 2rem;
+  }
+
+  .research-perspective-page .research-perspective-framework-image {
+    border: 1px solid var(--publication-border);
+    border-radius: var(--perspective-radius);
+    padding: clamp(0.5rem, 1vw, 1rem);
+    background: white;
+  }
+
+  .research-perspective-page .research-perspective-framework-image img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .research-perspective-page .research-perspective-framework-caption {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 0.75rem 2rem;
+    margin-top: 0.875rem;
+    color: var(--perspective-muted);
+    font-size: 0.8125rem;
+    line-height: 1.7;
+  }
+
+  .research-perspective-page .research-perspective-framework-caption p {
+    flex: 1 1 34rem;
+    min-width: 0;
+  }
+
+  .research-perspective-page .research-perspective-framework-link {
+    color: var(--publication-accent);
+    white-space: normal;
+  }
+
+  @media (min-width: 48rem) {
+    .research-perspective-page .research-perspective-principle {
+      display: grid;
+      grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.6fr);
+      align-items: start;
+      column-gap: 2rem;
+    }
+
+    .research-perspective-page .research-perspective-principle p {
+      margin-top: 0;
+    }
+  }
+
+  @media (min-width: 80rem) {
+    .research-perspective-page .research-perspective-principles {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .research-perspective-page .research-perspective-principle {
+      display: block;
+    }
+
+    .research-perspective-page .research-perspective-principle p {
+      margin-top: 0.875rem;
+    }
+
+    .research-perspective-page .research-perspective-principle-title {
+      min-block-size: 2.9em;
+    }
+  }
+}

@@ -8,8 +8,10 @@ const html = await readFile(join(outputDirectory, "index.html"), "utf8")
 // GitHub Pages needs a real HTML entry for each browser-router URL.
 // Keep these paths aligned with src/app/routes.tsx when adding new pages.
 const routes = [
+  "research",
   "projects",
   "publications",
+  "hobbies",
   "projects/multimodal-physiological-sensing",
   "projects/interactive-insomnia-knowledge-system",
 ]
@@ -23,4 +25,6 @@ for (const route of routes) {
 await writeFile(join(outputDirectory, "404.html"), html)
 await writeFile(join(outputDirectory, ".nojekyll"), "")
 
-console.log(`Prepared ${routes.length} page routes and a 404 page for GitHub Pages.`)
+console.log(
+  `Prepared ${routes.length} page routes and a 404 page for GitHub Pages.`,
+)

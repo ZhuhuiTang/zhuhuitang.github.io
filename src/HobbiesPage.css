@@ -1,0 +1,128 @@
+@layer theme, base, components, utilities;
+
+@layer components {
+  .page-container.hobbies-page {
+    color: #62636a;
+  }
+
+  .hobbies-page .hobbies-page-intro {
+    border-bottom: 1px solid #e8e6e6;
+  }
+
+  .hobbies-page-section {
+    padding-top: clamp(1.75rem, 3vw, 2.25rem);
+    scroll-margin-top: 7.5rem;
+  }
+
+  .hobbies-page-section + .hobbies-page-section {
+    margin-top: clamp(1.75rem, 3vw, 2.25rem);
+    border-top: 1px solid #e8e6e6;
+  }
+
+  .hobbies-page-heading {
+    display: grid;
+    grid-template-columns: 2.25rem minmax(0, 1fr);
+    align-items: baseline;
+    column-gap: 0.75rem;
+  }
+
+  .hobbies-page-number {
+    color: #c9705f;
+    font-size: 0.8125rem;
+    font-variant-numeric: tabular-nums;
+    letter-spacing: 0.08em;
+  }
+
+  .hobbies-page-heading h2 {
+    color: #3c2b2b;
+    font-size: clamp(1.25rem, 2vw, 1.5rem);
+    font-weight: 600;
+    line-height: 1.35;
+    letter-spacing: -0.02em;
+  }
+
+  .hobbies-page-copy {
+    display: grid;
+    grid-column: 1 / -1;
+    gap: 0.75rem;
+    margin-top: 0.75rem;
+    font-size: var(--page-body-size);
+    line-height: var(--page-body-leading);
+  }
+
+  .hobbies-page-figure {
+    margin-top: 1.25rem;
+  }
+
+  .hobbies-page-gallery {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 0.875rem;
+  }
+
+  .hobbies-page-gallery--dancing {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 2fr) minmax(0, 2fr);
+    align-items: start;
+  }
+
+  .hobbies-page-gallery--tennis {
+    grid-template-columns: minmax(0, 18rem);
+  }
+
+  .hobbies-page-gallery--volunteering {
+    grid-template-columns: minmax(0, 1.5fr) minmax(0, 1.333fr) minmax(0, 1.778fr);
+    align-items: start;
+  }
+
+  .hobbies-page-photo {
+    display: block;
+    min-width: 0;
+    overflow: hidden;
+    border: 1px solid #e8e1dc;
+    border-radius: 0.5rem;
+    background: #f6f3f0;
+  }
+
+  .hobbies-page-photo img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .hobbies-page-photo:focus-visible {
+    outline: 2px solid #c9705f;
+    outline-offset: 4px;
+  }
+
+.hobbies-page-photo-placeholder svg {
+    width: 2.25rem;
+    height: 2.25rem;
+    stroke: currentColor;
+    stroke-width: 1.25;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+.hobbies-page-figure figcaption {
+    margin-top: 0.875rem;
+    color: #8a6b6b;
+    font-size: 0.8125rem;
+    font-style: italic;
+    line-height: 1.6;
+  }
+
+  @media (max-width: 47.999rem) {
+    .hobbies-page-gallery {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.625rem;
+    }
+
+    .hobbies-page-gallery--tennis {
+      grid-template-columns: minmax(0, 18rem);
+    }
+
+    .hobbies-page-gallery--volunteering .hobbies-page-photo:last-child {
+      grid-column: 1 / -1;
+    }
+  }
+}

@@ -19,3 +19,7 @@ logs/
 # beside it.
 /.plugins/
 /.opencode-skills/
+
+# Local edit backups and preview state
+/backups/
+/.figaro/
