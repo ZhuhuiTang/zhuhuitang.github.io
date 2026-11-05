@@ -149,3 +149,6 @@
 public/assets/*.png -filter -diff -merge -text
 public/assets/*.jpg -filter -diff -merge -text
 public/assets/*.jpeg -filter -diff -merge -text
+
+# Linked publication PDFs must be available to GitHub Pages builds.
+public/papers/*.pdf -filter -diff -merge -text

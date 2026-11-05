@@ -57,6 +57,11 @@ export default function Publications() {
                       : "First author"}
                   </span>
                 )}
+                {publication.language && (
+                  <span className="publication-badge publication-badge--language">
+                    {publication.language}
+                  </span>
+                )}
               </div>
             </div>
           </li>

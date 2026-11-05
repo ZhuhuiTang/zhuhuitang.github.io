@@ -1,4 +1,4 @@
-type IconName = "mail" | "scholar" | "github" | "linkedin" | "download" | "external"
+type IconName = "mail" | "scholar" | "linkedin" | "download" | "external"
 
 function ContactIcon({ name }: { name: IconName }) {
   return (
@@ -23,12 +23,6 @@ function ContactIcon({ name }: { name: IconName }) {
         <path
           fill="currentColor"
           d="M12 2 1 8l11 6 9-4.91V16h2V8L12 2Zm-7 11v5c4 4 10 4 14 0v-5l-7 4-7-4Z"
-        />
-      )}
-      {name === "github" && (
-        <path
-          fill="currentColor"
-          d="M12 .8a11.3 11.3 0 0 0-3.57 22.02c.56.1.77-.24.77-.54v-2.1c-3.15.68-3.82-1.34-3.82-1.34-.51-1.3-1.25-1.65-1.25-1.65-1.03-.7.08-.69.08-.69 1.13.08 1.73 1.16 1.73 1.16 1 1.73 2.64 1.23 3.28.94.1-.73.39-1.23.71-1.51-2.52-.28-5.17-1.26-5.17-5.61 0-1.24.44-2.25 1.16-3.04-.12-.28-.5-1.44.11-3 0 0 .95-.3 3.11 1.16a10.8 10.8 0 0 1 5.66 0c2.16-1.46 3.11-1.16 3.11-1.16.61 1.56.23 2.72.11 3 .72.79 1.16 1.8 1.16 3.04 0 4.36-2.65 5.32-5.18 5.6.41.36.77 1.04.77 2.1v3.1c0 .3.21.65.78.54A11.3 11.3 0 0 0 12 .8Z"
         />
       )}
       {name === "linkedin" && (
@@ -63,15 +57,17 @@ function ContactIcon({ name }: { name: IconName }) {
   )
 }
 
-const pendingLinks = [
-  { label: "GitHub", icon: "github" },
-  { label: "CV", icon: "download" },
-] as const
+const pendingLinks = [{ label: "CV", icon: "download" }] as const
 
 export default function SidebarContact() {
   return (
     <div className="sidebar-contact">
-      <div className="sidebar-affiliation">
+      <a
+        className="sidebar-affiliation hover:underline focus-visible:outline-2 focus-visible:outline-offset-4"
+        href="https://www.yjstcm.ac.cn/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         <img
           className="sidebar-emblem"
           src="/assets/cacms-emblem.png"
@@ -81,7 +77,7 @@ export default function SidebarContact() {
         />
         <ContactIcon name="external" />
         <span>Beijing, China</span>
-      </div>
+      </a>
 
       <div
         className="sidebar-contact-list"

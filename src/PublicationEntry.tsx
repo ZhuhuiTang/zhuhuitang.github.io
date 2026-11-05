@@ -23,7 +23,12 @@ export default function PublicationEntry({
 }: PublicationEntryProps) {
   const [summaryOpen, setSummaryOpen] = useState(false)
   const hasSummary = Boolean(details?.researchSummary?.length)
-  const metadata = [details?.year, details?.authorRole, details?.type]
+  const metadata = [
+    details?.year,
+    details?.authorRole,
+    details?.type,
+    details?.language,
+  ]
     .filter(Boolean)
     .join(" · ")
   const titleId = `${entryId}-title`
@@ -63,7 +68,10 @@ export default function PublicationEntry({
           <>
             <p className="publication-entry-summary">{details.summary}</p>
 
-            <ul className="publication-entry-tags" aria-label="Publication topics">
+            <ul
+              className="publication-entry-tags"
+              aria-label="Publication topics"
+            >
               {details.tags.map((tag) => (
                 <li key={tag}>{tag}</li>
               ))}
@@ -84,18 +92,20 @@ export default function PublicationEntry({
               <path d={summaryOpen ? "m5 15 7-7 7 7" : "m5 9 7 7 7-7"} />
             </svg>
           </button>
-          <button
-            className="publication-entry-action"
-            type="button"
-            disabled
-            title="Paper link not yet provided"
-            aria-label="Paper — link not yet provided"
-          >
-            <svg aria-hidden="true" viewBox="0 0 24 24" fill="none">
-              <path d="M14 4h6v6m0-6-9 9M10 5H5v14h14v-5" />
-            </svg>
-            Paper
-          </button>
+          {details?.paper && (
+            <a
+              className="publication-entry-action"
+              href={details.paper.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={`${details.paper.label}: ${title}`}
+            >
+              <svg aria-hidden="true" viewBox="0 0 24 24" fill="none">
+                <path d="M14 4h6v6m0-6-9 9M10 5H5v14h14v-5" />
+              </svg>
+              {details.paper.label}
+            </a>
+          )}
           {details?.relatedProject && (
             <Link
               className="publication-entry-action"

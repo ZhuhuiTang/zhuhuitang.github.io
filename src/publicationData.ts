@@ -2,6 +2,11 @@ export interface PublicationDetails {
   year?: number
   authorRole?: string
   type?: string
+  language?: string
+  paper?: {
+    href: string
+    label: string
+  }
   authors: string
   journal: string
   citation: string
@@ -21,6 +26,7 @@ export interface Publication {
   width: number
   height: number
   firstAuthor: boolean
+  language?: string
   details?: PublicationDetails
 }
 
@@ -33,10 +39,16 @@ export const publications: Publication[] = [
     width: 1774,
     height: 887,
     firstAuthor: true,
+    language: "In Chinese",
     details: {
       year: 2024,
       authorRole: "First Author",
       type: "Methodological Perspective",
+      language: "In Chinese",
+      paper: {
+        href: "https://link.cnki.net/doi/10.19945/j.cnki.issn.1006-3250.2024.11.016",
+        label: "View on CNKI",
+      },
       authors:
         "Zhuhui Tang, Xu Tong, Yafei Jia, Shiyue Deng, Gaoshuang Fu, Qiong Wu, Yupeng Zhang",
       journal: "Journal of Basic Chinese Medicine",
@@ -53,10 +65,6 @@ export const publications: Publication[] = [
         "This distinction matters for knowledge discovery: information that can be defined or standardized is not necessarily handled in the same way as context-dependent clinical judgments. Rather than selecting a computational technique first, the paper argues for defining the research question and choosing an appropriate way to organize cases—by disease, prescription, medicinal substance, syndrome, practitioner, or historical and regional context.",
         "It also emphasizes credible case selection, fidelity to original records, and methods suited to the material, with domain experts guiding interpretation. Comparing practice-derived patterns with established theory can then help examine their consistency, differences, and potential contributions to medical knowledge.",
       ],
-      relatedProject: {
-        title: "Interactive Insomnia Knowledge System",
-        href: "/projects/interactive-insomnia-knowledge-system",
-      },
     } satisfies PublicationDetails,
   },
   {
@@ -71,6 +79,10 @@ export const publications: Publication[] = [
       year: 2024,
       authorRole: "Co-First Author",
       type: "Review",
+      paper: {
+        href: "/papers/research-progress-tcm-records-ai-zhuhui-tang.pdf",
+        label: "Paper",
+      },
       authors:
         "Zhuhui Tang, Qiong Wu, Yafei Jia, Shiyue Deng, Gaoshuang Fu, Jiatian Yu, Xu Tong, Yupeng Zhang",
       journal: "Guidelines and Standards of Chinese Medicine",
@@ -93,7 +105,12 @@ export const publications: Publication[] = [
     width: 1774,
     height: 887,
     firstAuthor: false,
+    language: "In Chinese",
     details: {
+      paper: {
+        href: "https://link.cnki.net/doi/10.19945/j.cnki.issn.1006-3250.20250410.001",
+        label: "View on CNKI",
+      },
       authors:
         "Jiatian Yu, Xu Tong, Lin Tong, Zhuhui Tang, Yupeng Zhang, Huamin Zhang",
       journal: "Journal of Basic Chinese Medicine",

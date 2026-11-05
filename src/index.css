@@ -464,7 +464,7 @@
     grid-template-columns: minmax(0, 1fr);
     align-items: start;
     gap: 3.5rem;
-    padding-block: 4rem 6rem;
+    padding-block: 4rem 2.25rem;
   }
 
   .profile-sidebar {
@@ -834,6 +834,24 @@
     font-size: 0.875rem;
   }
 
+  .home-projects-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1.5rem;
+  }
+
+  @media (min-width: 40rem) {
+    .home-projects-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
+  @media (min-width: 64rem) {
+    .home-projects-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+  }
+
   .projects .projects-heading {
     margin-bottom: 1.5rem;
   }
@@ -1121,6 +1139,12 @@
     border-color: #d4e3d8;
     background: #eff6f0;
     color: #47664e;
+  }
+
+  .publication-badge--language {
+    border-color: #e0e3e6;
+    background: #f4f5f6;
+    color: #626b73;
   }
 
   .publication-badge--author {

@@ -1,14 +1,14 @@
+import ContactFooter from "./ContactFooter"
 import SidebarContact from "./SidebarContact"
 import Publications from "./Publications"
 import HobbiesVolunteering from "./HobbiesVolunteering"
 import ResearchInterests from "./ResearchInterests"
-import { useHorizontalCarousel } from "./useHorizontalCarousel"
 import { Link } from "react-router"
 import { projects } from "./projects"
 import SectionAllLink from "./SectionAllLink"
 
 export default function App() {
-  const { trackRef } = useHorizontalCarousel()
+  const homeProjects = projects.slice(0, 3)
 
   return (
     <div className="min-h-screen bg-white text-[#8a6b6b]">
@@ -150,12 +150,6 @@ export default function App() {
               >
                 NEWS &amp; UPDATES
               </h2>
-              <a className="news-all-link" href="#news-list">
-                All news
-                <svg aria-hidden="true" viewBox="0 0 24 24" fill="none">
-                  <path d="M6 18 18 6M7 6h11v11" />
-                </svg>
-              </a>
             </div>
             <div
               aria-hidden="true"
@@ -168,15 +162,31 @@ export default function App() {
               <li>
                 <p>
                   <time
+                    dateTime="2026-11"
+                    className="font-semibold text-[#c9705f]"
+                  >
+                    [2026-11]
+                  </time>{" "}
+                  I launched my personal academic website to share my{" "}
+                  <strong>
+                    research journey, selected projects, and evolving interests
+                  </strong>{" "}
+                  in human-centered AI and digital health.
+                </p>
+              </li>
+              <li>
+                <p>
+                  <time
                     dateTime="2026-05"
                     className="font-semibold text-[#c9705f]"
                   >
                     [2026-05]
                   </time>{" "}
-                  Entering paper questionnaires into Excel can easily introduce
-                  all kinds of errors. To improve efficiency and reduce
-                  mistakes, I independently designed and built a small tool to
-                  assist with the data-entry process!
+                  After noticing how easily errors can occur when entering
+                  paper-based clinical questionnaires into Excel, I
+                  independently designed and built a{" "}
+                  <strong>lightweight data-entry tool</strong> to streamline the
+                  process and help reduce mistakes.
                 </p>
               </li>
               <li>
@@ -187,37 +197,17 @@ export default function App() {
                   >
                     [2026-03]
                   </time>{" "}
-                  I contributed to and helped push forward interview-style
-                  questionnaire sessions for about 100 participants—a truly
-                  rewarding experience. It deepened my understanding of clinical
-                  settings, communication in the field, and data quality!
-                </p>
-              </li>
-              <li>
-                <p>
-                  <time
-                    dateTime="2025-12"
-                    className="font-semibold text-[#c9705f]"
-                  >
-                    [2025-12]
-                  </time>{" "}
-                  Several TCM wellness books that I contributed to as a credited
-                  text editor have been officially published—so happy (It was
-                  also great training in knowledge curation and clear writing.)
-                </p>
-              </li>
-              <li>
-                <p>
-                  <time
-                    dateTime="2025-11"
-                    className="font-semibold text-[#c9705f]"
-                  >
-                    [2025-11]
-                  </time>{" "}
-                  Under my supervisor&apos;s guidance, I helped complete and
-                  iteratively refine the questionnaire/interview workflow, and
-                  we eventually shaped a survey that better fits real clinical
-                  contexts and is much more actionable.
+                  I contributed to{" "}
+                  <strong>
+                    interview-based questionnaire data collection involving
+                    approximately 100 participants
+                  </strong>
+                  , building on earlier work to refine the survey and interview
+                  workflow. This experience deepened my understanding of{" "}
+                  <strong>
+                    patient communication, clinical research, and data quality
+                  </strong>
+                  .
                 </p>
               </li>
               <li>
@@ -228,11 +218,32 @@ export default function App() {
                   >
                     [2025-10]
                   </time>{" "}
-                  I began a Research Assistant (RA) role jointly run by Beijing
-                  University of Chinese Medicine and the Institute of
-                  Information on Traditional Chinese Medicine, China Academy of
-                  Chinese Medical Sciences, entering research workflows around
-                  clinical cohorts and multimodal physiological data.
+                  I began my role as a <strong>Research Assistant</strong> at
+                  the Institute of Information on Traditional Chinese Medicine,
+                  Chinese Academy of Chinese Medical Sciences, working with{" "}
+                  <strong>
+                    clinical cohort data and multimodal physiological
+                    measurements
+                  </strong>
+                  .
+                </p>
+              </li>
+              <li>
+                <p>
+                  <time
+                    dateTime="2025-06"
+                    className="font-semibold text-[#c9705f]"
+                  >
+                    [2025-06]
+                  </time>{" "}
+                  I completed my master&apos;s studies at the{" "}
+                  <strong>Chinese Academy of Chinese Medical Sciences</strong>,
+                  where my research focused on{" "}
+                  <strong>
+                    medical informatics, clinical knowledge representation, and
+                    knowledge discovery from real-world insomnia data
+                  </strong>
+                  .
                 </p>
               </li>
             </ol>
@@ -248,14 +259,8 @@ export default function App() {
             <h2 id="projects-title">Projects</h2>
             <SectionAllLink to="/projects" label="projects" />
           </div>
-          <ul
-            className="projects-track"
-            id="projects-track"
-            ref={trackRef}
-            tabIndex={0}
-            aria-label={`${projects.length} projects; scroll horizontally to browse`}
-          >
-            {projects.map((project, index) => {
+          <ul className="home-projects-grid" aria-label="Selected projects">
+            {homeProjects.map((project, index) => {
               const destination =
                 index < 2
                   ? `/projects/${project.id}`
@@ -288,16 +293,18 @@ export default function App() {
                         <li key={tag}>{tag}</li>
                       ))}
                     </ul>
-                    <Link
-                      className="project-view"
-                      to={destination}
-                      aria-label={`View Project: ${project.title}`}
-                    >
-                      View Project
-                      <svg aria-hidden="true" viewBox="0 0 24 24" fill="none">
-                        <path d="M6 18 18 6M7 6h11v11" />
-                      </svg>
-                    </Link>
+                    {index < 2 && (
+                      <Link
+                        className="project-view"
+                        to={destination}
+                        aria-label={`View Project: ${project.title}`}
+                      >
+                        View Project
+                        <svg aria-hidden="true" viewBox="0 0 24 24" fill="none">
+                          <path d="M6 18 18 6M7 6h11v11" />
+                        </svg>
+                      </Link>
+                    )}
                   </div>
                 </li>
               )
@@ -306,6 +313,7 @@ export default function App() {
         </section>
         <HobbiesVolunteering />
       </main>
+      <ContactFooter />
     </div>
   )
 }
