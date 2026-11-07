@@ -96,25 +96,23 @@ export default function ProjectTwoPage() {
             My Role &amp; Contributions
           </h2>
           <p className="project-page-description">
-            As{" "}
-            <strong className="font-semibold">Co-Principal Investigator</strong>,
-            I worked closely with my faculty advisor on the research strategy
-            and{" "}
-            <strong className="font-semibold">
-              led the main implementation work
-            </strong>{" "}
-            for the insomnia case study. The platform was developed using an
-            existing knowledge engine from a collaborating institute.
+            As Co-Principal Investigator (Co-PI), I worked closely with my
+            faculty advisor throughout the project, from research conception and
+            proposal development to study implementation and analysis. I took
+            primary responsibility for preparing the project proposal and funding
+            application and led the main implementation of the insomnia case
+            study.
           </p>
           <ol className="mt-2 w-full space-y-6">
             <li>
               <h3 className="project-page-description font-semibold">
-                01 · Research Design &amp; Study Planning
+                01 · Research Design &amp; Project Planning
               </h3>
               <p className="project-page-description mt-2">
-                Helped translate the proposed methodological idea into an
-                operational study, including the selection of insomnia cases and
-                the plan for comparison with existing literature.
+                Prepared the project proposal and funding application, and
+                co-developed the study framework, including methodological
+                planning, clinical case selection criteria, and the strategy for
+                comparing case-derived patterns with established domain knowledge.
               </p>
             </li>
             <li>
@@ -122,18 +120,32 @@ export default function ProjectTwoPage() {
                 02 · Clinical Knowledge Engineering
               </h3>
               <p className="project-page-description mt-2">
-                Led case processing, terminology standardization, knowledge
-                representation design, and knowledge graph construction.
+                Led clinical case processing, terminology standardization,
+                knowledge representation design, and knowledge graph construction,
+                transforming narrative medical records into structured and
+                explorable clinical knowledge.
               </p>
             </li>
             <li>
               <h3 className="project-page-description font-semibold">
-                03 · Interactive System &amp; Analysis
+                03 · Interactive System Design &amp; Implementation
               </h3>
               <p className="project-page-description mt-2">
-                Led the design of knowledge-exploration workflows and
-                visualization modules, and carried out analyses to support the
-                subsequent comparison with established knowledge.
+                Led the design and implementation of knowledge-exploration
+                workflows and visualization modules, enabling researchers to
+                navigate clinical relationships, examine association patterns,
+                and compare findings across different knowledge representations.
+              </p>
+            </li>
+            <li>
+              <h3 className="project-page-description font-semibold">
+                04 · Research Analysis &amp; Evaluation
+              </h3>
+              <p className="project-page-description mt-2">
+                Conducted case-based analyses and literature comparisons to
+                assess the feasibility of the proposed methodology and
+                critically examine the interpretation and limitations of observed
+                clinical associations.
               </p>
             </li>
           </ol>
@@ -200,27 +212,46 @@ export default function ProjectTwoPage() {
             Interactive Knowledge Exploration
           </h2>
           <p className="project-page-description">
-            To make the structured knowledge accessible for exploratory research,
-            I{" "}
-            <strong className="font-semibold">
-              led the design and implementation of a web-based interface
-            </strong>{" "}
-            for navigating case-derived relationships.
+            To make structured clinical knowledge accessible for exploratory
+            research, I led the design and implementation of a researcher-facing
+            web interface for navigating relationships extracted from clinical
+            case records.
           </p>
           <p className="project-page-description">
-            The system supported{" "}
-            <strong className="font-semibold">
-              multiple exploration pathways
-            </strong>{" "}
-            across diseases, symptoms, TCM syndromes, and herbal medicines,
-            combining node-link graphs, association charts, and searchable views.
+            The system supports multiple exploration pathways across diseases,
+            symptoms, TCM syndromes, and herbal medicines, combining interactive
+            node-link graphs, association charts, searchable views, and
+            adjustable filtering thresholds.
           </p>
+          <div className="mt-2 w-full space-y-4">
+            <h3 className="project-page-description font-semibold">
+              Disease-Centered Exploration
+            </h3>
+            <p className="project-page-description">
+              Researchers can explore different relationship pathways, including
+              disease–syndrome–symptom, disease–symptom–syndrome,
+              disease–syndrome–herbal medicine, and
+              disease–herbal medicine–syndrome. These interactive views support
+              the examination and comparison of patterns documented across
+              clinical cases.
+            </p>
+          </div>
+          <div className="mt-4 w-full space-y-4">
+            <h3 className="project-page-description font-semibold">
+              Custom-Formula Exploration
+            </h3>
+            <p className="project-page-description">
+              Researchers can specify herbal combinations and explore their
+              relationships with documented symptoms, syndromes, and associated
+              herbal medicines. The module integrates knowledge graph
+              visualization and frequency-based charts to support the exploration
+              of formula-related patterns.
+            </p>
+          </div>
           <p className="project-page-description">
-            A{" "}
-            <strong className="font-semibold">custom-prescription module</strong>{" "}
-            enabled researchers to explore selected herbal combinations and their
-            associated symptoms, syndromes, and frequencies. It was designed for
-            knowledge exploration, not autonomous diagnosis or treatment.
+            Together, these functions enable researchers to systematically
+            explore, compare, and interpret clinical relationships through
+            interactive knowledge representations.
           </p>
         </section>
 
@@ -326,14 +357,6 @@ export default function ProjectTwoPage() {
         >
           <h2 id="project-two-outputs-title">Research Outputs</h2>
           <div className="mt-2 w-full space-y-6">
-            <div className="space-y-2">
-              <h3 className="project-page-description font-semibold">
-                Related Publications
-              </h3>
-              <ul className="project-page-description list-disc pl-5">
-                <li>[Paper Title · Year] — View Paper</li>
-              </ul>
-            </div>
             <div className="space-y-2">
               <h3 className="project-page-description font-semibold">
                 Master&apos;s Thesis · 2025

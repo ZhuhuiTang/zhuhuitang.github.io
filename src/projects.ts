@@ -27,7 +27,7 @@ export const projects = [
     title: "Heart-System Knowledge Infrastructure",
     role: "Core Researcher · Data Engineering Lead",
     description:
-      "Developed clinical ontology schemas and data standardization protocols to transform unstructured heart-system medical records into structured, analysis-ready data for downstream research.",
+      "Designed clinical ontology schemas and led structured dataset construction, technical implementation, and quality control, transforming heterogeneous heart-system clinical records into standardized, analysis-ready data.",
     tags: ["Ontology Engineering", "Data Standardization", "Data Governance"],
     image: "/assets/project-heart-knowledge-infrastructure.png",
     alt: "Clinical knowledge infrastructure workflow connecting heart-system medical records, ontology engineering, data governance, and analysis-ready data",

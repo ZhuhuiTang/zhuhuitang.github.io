@@ -57,8 +57,6 @@ function ContactIcon({ name }: { name: IconName }) {
   )
 }
 
-const pendingLinks = [{ label: "CV", icon: "download" }] as const
-
 export default function SidebarContact() {
   return (
     <div className="sidebar-contact">
@@ -107,18 +105,17 @@ export default function SidebarContact() {
           <span>LinkedIn</span>
           <ContactIcon name="external" />
         </a>
-        {pendingLinks.map(({ label, icon }) => (
-          <span
-            className="sidebar-contact-row sidebar-contact-row--pending"
-            title={`${label} — 链接待补充`}
-            aria-label={`${label}，链接待补充`}
-            key={label}
-          >
-            <ContactIcon name={icon} />
-            <span>{label}</span>
-            <span className="sidebar-pending-label">Coming soon</span>
-          </span>
-        ))}
+        <a
+          className="sidebar-contact-row"
+          href="/cv/zhuhui-tang-cv.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="CV (PDF)"
+        >
+          <ContactIcon name="download" />
+          <span>CV</span>
+          <ContactIcon name="external" />
+        </a>
       </div>
     </div>
   )

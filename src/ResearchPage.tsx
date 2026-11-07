@@ -3,42 +3,19 @@ import "./ResearchPage.css"
 
 const principles = [
   {
-    title: "Context-Aware Multimodal Sensing",
-    description: (
-      <>
-        I am interested in combining{" "}
-        <strong>physiological and behavioral data from wearable sensors</strong>{" "}
-        with <strong>self-reports and everyday context</strong>. Rather than
-        relying on sensor measurements alone, I hope to explore how these{" "}
-        <strong>complementary sources of evidence</strong> can support a more
-        meaningful understanding of individual health.
-      </>
-    ),
+    title: "Contextual & Multimodal Health Data",
+    description:
+      "Health experiences are rarely captured by a single measurement. I am interested in how physiological signals, clinical records, and self-reports can complement one another, while accounting for data quality, individual differences, and everyday context.",
   },
   {
-    title: "Interpretable Health Insights",
-    description: (
-      <>
-        <strong>Collecting data is only the beginning.</strong> I am interested
-        in how complex physiological and behavioral signals can be transformed
-        into <strong>meaningful, evidence-grounded insights</strong> that{" "}
-        <strong>people can understand</strong>, rather than simply displaying
-        measurements or prediction scores.
-      </>
-    ),
+    title: "Interpretable & Trustworthy Health AI",
+    description:
+      "Collecting or analyzing health data is only part of the challenge. I want to explore how complex health information can be represented and explained in ways that make the supporting evidence, limitations, and uncertainty clear, rather than presenting predictions as definitive answers.",
   },
   {
-    title: "Interactive & Actionable Feedback",
-    description: (
-      <>
-        I see health AI as{" "}
-        <strong>more than a one-way information system</strong>. I am interested
-        in designing <strong>interactive feedback</strong> that allows people to{" "}
-        <strong>reflect on health information</strong>, contribute their own
-        perspectives, and <strong>make informed decisions</strong> in everyday
-        life.
-      </>
-    ),
+    title: "Human-Centered Interaction & Support",
+    description:
+      "I am interested in how people interact with health AI systems: how they express concerns, contribute personal context, question interpretations, and reflect on feedback. I hope to explore forms of interaction and support that respect user autonomy and help people make informed decisions.",
   },
 ]
 

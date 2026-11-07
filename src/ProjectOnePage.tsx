@@ -60,16 +60,17 @@ export default function ProjectOnePage() {
         >
           <h2 id="project-overview-title">Overview</h2>
           <p className="project-page-description">
-            This ongoing project involves collecting and organizing multimodal
-            physiological recordings, clinical questionnaires, and outpatient
-            records to support research on sleep-related and
-            cardio-cerebrovascular conditions.
+            This ongoing project brings together multimodal physiological
+            recordings, clinical questionnaires, and outpatient records to
+            support research on sleep-related and cardiovascular health
+            conditions.
           </p>
           <p className="project-page-description">
-            As a research assistant, I participate in patient-facing data
-            collection, survey administration, and physiological signal
-            acquisition, as well as data quality checks and preparation for
-            downstream analysis.
+            As a research assistant, I have participated in patient-facing data
+            collection, questionnaire administration, physiological signal
+            acquisition, and data organization. The available physiological
+            recordings have now been exported and processed, and the project has
+            progressed to statistical analysis.
           </p>
         </section>
 
@@ -83,14 +84,14 @@ export default function ProjectOnePage() {
           <p className="project-page-description">
             I have participated in collecting and organizing physiological
             recordings, including electrocardiography (ECG),
-            electroencephalography (EEG), and galvanic skin response (GSR),
-            alongside other physiological measurements such as pulse and
-            respiration.
+            electroencephalography (EEG), electrodermal measurements, pulse
+            waveforms, and respiration.
           </p>
           <p className="project-page-description">
-            My responsibilities also include basic signal preprocessing, data
-            organization, and documentation to support subsequent research and
-            analysis.
+            Through this work, I have gained practical exposure to physiological
+            recording procedures, data quality considerations, and the
+            challenges of handling heterogeneous signals collected in clinical
+            settings.
           </p>
         </section>
         <figure className="project-detail-figure mt-8">
@@ -105,15 +106,48 @@ export default function ProjectOnePage() {
 
         <section
           className="project-page-details mt-12 max-w-4xl md:mt-16"
+          aria-labelledby="project-analysis-title"
+        >
+          <h2 id="project-analysis-title">
+            Data Processing &amp; Statistical Analysis
+          </h2>
+          <p className="project-page-description">
+            The project uses an existing MATLAB-based workflow for multimodal
+            physiological signal processing. The workflow covers data import and
+            timestamp handling, signal preprocessing, quality assessment,
+            temporal alignment, and physiological feature extraction.
+          </p>
+          <p className="project-page-description">
+            Working with this workflow has helped me develop a better
+            understanding of how raw physiological recordings are transformed
+            into structured features for subsequent analysis, including the
+            importance of signal quality, processing choices, and cross-modal
+            consistency.
+          </p>
+          <p className="project-page-description">
+            The currently available recordings have been exported and processed.
+            Statistical analysis is now underway to examine the collected
+            physiological and clinical data.
+          </p>
+          <p className="project-page-description">
+            I am particularly interested in how objective physiological
+            measurements and patients&apos; subjective reports can be analyzed
+            together, and how differences between these sources may inform more
+            contextualized interpretations of health.
+          </p>
+        </section>
+
+        <section
+          className="project-page-details mt-12 max-w-4xl md:mt-16"
           aria-labelledby="project-fieldwork-title"
         >
           <h2 id="project-fieldwork-title">
             Clinical Fieldwork &amp; Questionnaire Design
           </h2>
           <p className="project-page-description">
-            I co-designed clinical questionnaires and administered surveys during
-            outpatient visits. I also helped organize clinical records and check
-            data completeness and consistency to support subsequent research and
+            I co-designed clinical questionnaires and administered surveys
+            during outpatient visits. I also helped organize clinical records
+            and check data completeness and consistency to support subsequent
             analysis.
           </p>
         </section>
@@ -132,11 +166,10 @@ export default function ProjectOnePage() {
           </p>
           <p className="project-page-description">
             To streamline this process, I developed a lightweight web-based tool
-            with AI-assisted coding. Instead of entering each response manually,
-            I read the completed questionnaires aloud, converted my narration
-            into text using speech recognition, and used the tool to
-            automatically organize the information into structured questionnaire
-            fields and generate an individual Excel record for each patient.
+            using AI-assisted coding and speech recognition. The workflow
+            converts spoken questionnaire responses into text, organizes them
+            into predefined questionnaire fields, and exports structured Excel
+            records for review.
           </p>
           <p className="project-page-description">
             This experience strengthened my interest in designing practical
@@ -161,33 +194,34 @@ export default function ProjectOnePage() {
             A Moment from Clinical Fieldwork
           </h2>
           <p className="project-page-description">
-            I still remember one outpatient session when a patient quietly shared
-            that they had recently been through a difficult family situation and
-            were feeling emotionally low. As I looked at the monitoring screen,
-            I noticed a striking difference between the EEG signals recorded from
-            the left and right sides.
+            During one outpatient session, a patient described going through a
+            difficult period. While observing the physiological monitoring
+            display, I found myself wondering how much these recordings could
+            tell us about the patient&apos;s experience.
           </p>
           <p className="project-page-description">
-            I found myself wondering whether this difference could tell me
-            anything about what the patient was experiencing. But I also knew
-            that such differences could have many explanations and could not be
-            interpreted from the screen alone.
+            I also recognized that physiological signals alone cannot explain
+            what someone is feeling. Their interpretation depends on recording
+            conditions, signal quality, clinical context, and the person&apos;s
+            own account of their experience.
           </p>
           <p className="project-page-description">
-            That experience left me with a question I still think about:{" "}
+            This observation left me with a question that continues to shape my
+            research interests:
+          </p>
+          <p className="project-page-description">
             <strong className="font-semibold">
-              How much can physiological data really tell us about a person&apos;s
-              experience without understanding their personal context?
+              How can physiological measurements and subjective experiences
+              complement each other to support a more contextualized
+              understanding of health?
             </strong>
           </p>
           <p className="project-page-description">
-            As data collection continues, a natural next step is to further
-            assess signal quality, preprocess physiological recordings, and
-            explore relationships between physiological features and clinical
-            questionnaire responses. Examining where objective measurements and
-            subjective reports align—or differ—may help identify patterns worth
-            investigating and reveal where additional context is needed for
-            meaningful interpretation.
+            As the project progresses through statistical analysis, I hope to
+            explore how physiological features and clinical questionnaire
+            responses relate to one another, while remaining attentive to
+            individual differences and the limitations of physiological
+            interpretation.
           </p>
         </section>
       </article>

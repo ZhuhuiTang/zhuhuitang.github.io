@@ -48,10 +48,13 @@ export default function App() {
               About Me
             </h2>
             <p className="mt-7 font-['Inter:Regular'] text-[17px] leading-[32px] font-normal">
-              I am a researcher with a background in clinical medicine and
-              medical informatics, exploring how AI, physiological sensing, and
-              human-centered approaches can make health data more interpretable,
-              contextual, and useful to people.
+              I am currently a Research Assistant at the China Academy of
+              Chinese Medical Sciences, with a background in clinical medicine
+              and medical informatics. My research interests lie in
+              human-centered AI for health, particularly how physiological
+              sensing, clinical knowledge, and self-reported experiences can be
+              integrated to make health information more interpretable,
+              context-aware, and actionable.
             </p>
           </section>
 
@@ -63,7 +66,7 @@ export default function App() {
               >
                 MY RESEARCH JOURNEY
               </h2>
-              <p className="font-['Inter:Light'] text-[17px] font-light text-[#c9705f]">
+              <p className="font-['Inter:Light'] text-[17px] font-light text-[#c9705f] italic">
                 From clinical questions to computational health research.
               </p>
               <div
@@ -72,21 +75,13 @@ export default function App() {
               />
               <div className="space-y-[10px] font-['Inter:Regular'] text-[18px] leading-[30px] font-normal">
                 <p>
-                  My research path began in clinical medicine, where I became
-                  interested in how complex patient experiences can be recorded,
-                  structured, and translated into useful evidence. During my
-                  master&apos;s training in medical informatics, I worked with
-                  real-world{" "}
-                  <strong className="font-['Inter:Semi_Bold'] font-semibold">
-                    clinical records
-                  </strong>{" "}
-                  and{" "}
-                  <strong className="font-['Inter:Semi_Bold'] font-semibold">
-                    knowledge graphs
-                  </strong>
-                  , including an{" "}
+                  My research journey began in clinical medicine, where I became
+                  interested in how complex patient experiences could be
+                  recorded, structured, and translated into useful evidence.
+                  During my master&apos;s research, I worked with real-world
+                  clinical records and knowledge graphs, including an{" "}
                   <Link
-                    className="text-[#c9705f] underline underline-offset-2"
+                    className="font-semibold text-[#c9705f] underline underline-offset-2"
                     to="/projects/interactive-insomnia-knowledge-system"
                   >
                     insomnia knowledge-discovery platform
@@ -94,23 +89,28 @@ export default function App() {
                   .
                 </p>
                 <p>
-                  More recently, my work has expanded to clinical surveys and{" "}
-                  <strong className="font-['Inter:Semi_Bold'] font-semibold">
-                    multimodal physiological sensing
-                  </strong>
-                  , including ECG, EEG, and GSR. These experiences have
-                  gradually shifted my attention from simply identifying
-                  patterns in health data toward broader questions about how
-                  computational systems can make those patterns understandable,
-                  contextual, and useful to people.
+                  More recently, my work has expanded through a{" "}
+                  <Link
+                    className="font-semibold text-[#c9705f] underline underline-offset-2"
+                    to="/projects/multimodal-physiological-sensing"
+                  >
+                    multimodal physiological sensing and clinical workflow
+                    project
+                  </Link>
+                  , involving ECG, EEG, electrodermal measurements, and clinical
+                  questionnaires. I have also developed a lightweight tool to
+                  help digitize questionnaire responses. These experiences have
+                  gradually shifted my attention from collecting and organizing
+                  health data toward understanding how physiological
+                  measurements and patients&apos; subjective experiences can
+                  inform one another.
                 </p>
                 <p>
-                  I am currently exploring these questions through AI, sensing
-                  technologies, and{" "}
-                  <strong className="font-['Inter:Semi_Bold'] font-semibold">
-                    human-centered approaches
-                  </strong>{" "}
-                  to digital health as I prepare for PhD study.
+                  I am now particularly interested in how physiological
+                  sensing, clinical knowledge, and self-reported experiences
+                  can be brought together to make health information more
+                  interpretable, contextualized, and actionable. This is the
+                  direction I hope to explore further through PhD research.
                 </p>
               </div>
             </div>
@@ -128,9 +128,6 @@ export default function App() {
               I am currently exploring PhD opportunities for Fall 2027. I would
               be grateful for opportunities to connect with researchers and
               discuss potential PhD positions or research collaborations.
-            </p>
-            <p className="phd-application-file-note">
-              Self-introduction slides coming soon.
             </p>
           </section>
         </div>
